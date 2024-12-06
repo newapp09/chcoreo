@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 5000;        
-const UUID = process.env.UUID || 'e3f3ae02-077a-4b5e-a8fe-75c6e7584daf'; //若需要改UUID，需要在config.json里改为一致
+const UUID = process.env.UUID || '6d0aa248-6c57-4e1f-9acf-b5073d5e3814'; //若需要改UUID，需要在config.json里改为一致
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';     
 const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'rule.cooking200.us.kg';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiMGY5NGU0Njk1NGRiYWNkNWE2NTE0NTlhNDQ0NzE0YzUiLCJ0IjoiNWYwMDljMWMtNzlhMS00ODc4LTk4M2ItMGY5NGRhODQwMGZhIiwicyI6Ik5UQTJZek14TVRndFpXWXlZUzAwTVRnMkxXRTFaVEF0TnpBMllXSm1OVEZqTXpNMSJ9';
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'ai.web30sky.us.kg';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiMGY5NGU0Njk1NGRiYWNkNWE2NTE0NTlhNDQ0NzE0YzUiLCJ0IjoiZTBmYzQ1YzAtNTg4Yy00Y2M0LWJlOTMtZWNmN2I4NTIzYzkzIiwicyI6Ik56UTBZVE0wWVdJdFlqazNNQzAwWW1SaExUbGhPVGd0WlRNM05tVm1ObVE0T1dJeSJ9';
 const CFIP = process.env.CFIP || 'na.ma';
 const NAME = process.env.NAME || 'Choreo';
 
